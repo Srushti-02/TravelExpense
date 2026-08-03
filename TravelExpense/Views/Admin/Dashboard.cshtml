@@ -1,0 +1,34 @@
+﻿@model TravelExpense.ViewModels.AdminDashboardViewModel
+
+<h2>Admin Dashboard</h2>
+
+<hr />
+
+<table border="1">
+
+    <tr>
+        <td>Total Users</td>
+        <td>@Model.TotalUsers</td>
+    </tr>
+
+    <tr>
+        <td>Total Claims</td>
+        <td>@Model.TotalClaims</td>
+    </tr>
+
+    <tr>
+        <td>Pending Claims</td>
+        <td>@Model.PendingClaims</td>
+    </tr>
+
+    <tr>
+        <td>Approved Claims</td>
+        <td>@Model.ApprovedClaims</td>
+    </tr>
+
+    <tr>
+        <td>Paid Claims</td>
+        <td>@Model.PaidClaims</td>
+    </tr>
+
+</table>

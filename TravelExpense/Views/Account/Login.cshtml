@@ -1,0 +1,24 @@
+﻿<h2>Login</h2>
+
+@if (ViewBag.Message != null)
+{
+    <h3>@ViewBag.Message</h3>
+}
+
+<form method="post">
+
+    <label>Email</label>
+    <br />
+    <input type="email" name="Email" />
+    <br /><br />
+
+    <label>Password</label>
+    <br />
+    <input type="password" name="Password" />
+    <br /><br />
+
+    <button type="submit">
+        Login
+    </button>
+
+</form>

@@ -1,0 +1,50 @@
+﻿@model List<TravelExpense.Models.ExpenseClaim>
+
+<h2>Pending Expense Claims</h2>
+
+<table border="1">
+
+    <tr>
+        <th>Claim Id</th>
+        <th>Email</th>
+        <th>Category</th>
+        <th>Amount</th>
+        <th>Description</th>
+        <th>Status</th>
+        <th>Action</th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+
+            <td>@item.ClaimId</td>
+
+            <td>@item.EmployeeId</td>
+
+            <td>@item.CategoryId</td>
+
+            <td>@item.Amount</td>
+
+            <td>@item.Description</td>
+
+            <td>@item.Status</td>
+
+            <td>
+
+                <a href="/Manager/Approve/@item.ClaimId">
+                    Approve
+                </a>
+
+                |
+
+                <a href="/Manager/Reject/@item.ClaimId">
+                    Reject
+                </a>
+
+            </td>
+
+        </tr>
+    }
+
+</table>

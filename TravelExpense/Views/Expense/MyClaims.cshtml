@@ -1,0 +1,32 @@
+﻿@model List<TravelExpense.Models.ExpenseClaim>
+
+<h2>My Claims</h2>
+
+<table border="1">
+
+    <tr>
+        <th>Claim Id</th>
+        <th>Email</th>
+        <th>Category</th>
+        <th>Amount</th>
+        <th>Status</th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+
+            <td>@item.ClaimId</td>
+
+            <td>@item.EmployeeId</td>
+
+            <td>@item.CategoryId</td>
+
+            <td>@item.Amount</td>
+
+            <td>@item.Status</td>
+
+        </tr>
+    }
+
+</table>

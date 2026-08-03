@@ -1,0 +1,42 @@
+﻿<h2>Create Expense Claim</h2>
+
+@if (ViewBag.Message != null)
+{
+    <h3>@ViewBag.Message</h3>
+}
+
+<form method="post">
+
+    <label>Employee Email</label>
+    <br />
+    <input type="email" name="EmployeeEmail" />
+    <br /><br />
+
+    <label>Category</label>
+    <br />
+
+    <select name="Category">
+        <option>Travel</option>
+        <option>Food</option>
+        <option>Hotel</option>
+        <option>Fuel</option>
+    </select>
+
+    <br /><br />
+
+    <label>Amount</label>
+    <br />
+    <input type="number" step="0.01" name="Amount" />
+    <br /><br />
+
+    <label>Description</label>
+    <br />
+    <textarea name="Description"></textarea>
+
+    <br /><br />
+
+    <button type="submit">
+        Submit Claim
+    </button>
+
+</form>
