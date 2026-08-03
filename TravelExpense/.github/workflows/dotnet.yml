@@ -1,29 +1,21 @@
-name: .NET Build
+name: Build ASP.NET Core Project
 
 on:
   push:
-    branches: [ "main" ]
-
-  pull_request:
-    branches: [ "main" ]
+    branches:
+      - main
 
 jobs:
   build:
-
     runs-on: ubuntu-latest
 
     steps:
+      - uses: actions/checkout@v4
 
-    - name: Checkout Code
-      uses: actions/checkout@v4
+      - uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: '8.0.x'
 
-    - name: Setup .NET
-      uses: actions/setup-dotnet@v4
-      with:
-        dotnet-version: '9.0.x'
+      - run: dotnet restore
 
-    - name: Restore Packages
-      run: dotnet restore
-
-    - name: Build Project
-      run: dotnet build --configuration Release --no-restore
+      - run: dotnet build --configuration Release --no-restore
